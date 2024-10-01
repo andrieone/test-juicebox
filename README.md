@@ -64,3 +64,23 @@ Follow these steps to install Test Juicebox:
 Congratulations! You have successfully installed Test Juicebox. You can now access your application at the provided URL.
 
 For more details, refer to the official Laravel documentation: [Laravel Documentation](https://laravel.com/docs).
+
+#### **Command for Manually Dispatching The Welcome Email Job**
+
+Run the Artisan command to dispatch the welcome email job manually:
+
+```bash
+php artisan send:welcome-email {user_id}
+```
+
+Replace `{user_id}` with the ID of an actual user in your database.
+
+---
+
+### Final Notes:
+- Ensure that your queue worker is running to process queued jobs. You can start a worker using:
+
+   ```bash
+   php artisan queue:work
+   ```
+
