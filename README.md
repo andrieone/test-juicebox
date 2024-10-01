@@ -11,7 +11,7 @@ Follow these steps to install Test Juicebox:
 2. **Clone the Repository**: Open your terminal and navigate to your desired installation directory. Run the following command to clone the Test Juicebox repository:
 
     ```bash
-    git clone https://github.com/Yesi-MCM/test-juicebox.git
+    git clone https://github.com/andrieone/test-juicebox.git
     ```
 
 3. **Install Dependencies**: Change into the cloned Test Juicebox directory and install the project dependencies:
