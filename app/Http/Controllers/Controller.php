@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 /**
  * @OA\Info(
- *   title="Laravel API Documentation",
- *  version="1.0.0",
- *  description="This is a sample Laravel API documentation.",
+ *      version="1.0.0",
+ *      title="Api documentation",
+ *      description="Api documentation",
  *  @OA\Contact(
  *   email=" [email protected]",
  * ),

@@ -6,7 +6,8 @@ use App\Http\Resources\PostResource;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Validator;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\JsonResponse;
 
 class PostController extends BaseController
 {
@@ -20,8 +21,10 @@ class PostController extends BaseController
      *   response=200,
      * description="Posts retrieved successfully",
      * @OA\JsonContent(
-     *  @OA\Property(property="data", type="array", @OA\Items(ref="#/components/schemas/Post")),
+     *  @OA\Property(property="data", type="array", @OA\Items(ref="#/components/schemas/PostResource")),
      * ),
+     * ),
+     * )
      */
     public function index(): JsonResponse
     {
@@ -48,7 +51,7 @@ class PostController extends BaseController
      * response=200,
      * description="Post created successfully",
      * @OA\JsonContent(
-     * @OA\Property(property="data", type="object", ref="#/components/schemas/Post"),
+     * @OA\Property(property="data", type="object", ref="#/components/schemas/PostResource"),
      * ),
      * ),
      * )
@@ -91,7 +94,7 @@ class PostController extends BaseController
      * response=200,
      * description="Post retrieved successfully",
      * @OA\JsonContent(
-     * @OA\Property(property="data", type="object", ref="#/components/schemas/Post"),
+     * @OA\Property(property="data", type="object", ref="#/components/schemas/PostResource"),
      * ),
      * ),
      * )
@@ -135,7 +138,7 @@ class PostController extends BaseController
      * response=200,
      * description="Post updated successfully",
      * @OA\JsonContent(
-     * @OA\Property(property="data", type="object", ref="#/components/schemas/Post"),
+     * @OA\Property(property="data", type="object", ref="#/components/schemas/PostResource"),
      * ),
      * ),
      * )
